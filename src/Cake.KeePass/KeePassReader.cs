@@ -11,12 +11,24 @@
     using KeePassLib.Keys;
     using KeePassLib.Serialization;
 
-    public class KeePassReader
+    /// <summary>
+    /// KeePass database reader class.
+    /// </summary>
+    public static class KeePassReader
     {
         private const string TitleFieldName = "Title";
         private const string UserNameFieldName = "UserName";
         private const string UrlFieldName = "URL";
+        private const string NotesFieldName = "Notes";
+        private const string PasswordFieldName = "Password";
 
+        /// <summary>
+        /// Attempts to read from the specified database and locate the entry based on the entry search criteria.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        /// <param name="databaseSettings">Database <see cref="KeePassDatabaseSettings">Settings</see>.</param>
+        /// <param name="entryCriteria"><see cref="KeePassEntryCriteria">Structure</see> describing the key to load.</param>
+        /// <returns>A populated <see cref="KeePassEntry"/> entry from the database.</returns>
         public static KeePassEntry Execute(ICakeContext context, KeePassDatabaseSettings databaseSettings, KeePassEntryCriteria entryCriteria)
         {
             if (databaseSettings == null)
@@ -82,8 +94,8 @@
             var ret = new KeePassEntry
                           {
                               Title = key.Strings.ReadSafe(TitleFieldName),
-                              Notes = key.Strings.ReadSafe("Notes"),
-                              Password = key.Strings.ReadSafe("Password"),
+                              Notes = key.Strings.ReadSafe(NotesFieldName),
+                              Password = key.Strings.ReadSafe(PasswordFieldName),
                               Url = key.Strings.ReadSafe(UrlFieldName),
                               Username = key.Strings.ReadSafe(UserNameFieldName),
                               Uuid = key.Uuid.ToHexString()
@@ -146,7 +158,7 @@
 
             if (!database.IsOpen)
             {
-                throw new Exception("Failed to open Keypass Database");
+                throw new Exception("Failed to open KeePass Database");
             }
 
             return database;

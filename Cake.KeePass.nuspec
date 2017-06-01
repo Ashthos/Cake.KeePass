@@ -16,5 +16,6 @@
   </metadata>
   <files>
     <file src="src/Cake.KeePass/bin/Release/Cake.KeePass.dll" target="lib\net45\" />    
+    <file src="src/Cake.KeePass/bin/Release/KeePassLib.dll" target="lib\net45\" />  
   </files>
 </package>
