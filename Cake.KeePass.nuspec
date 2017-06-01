@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Cake.KeePass</id>
+    <version>$version$</version>
+    <title>Cake.KeePass</title>
+    <authors>Ash Beeson</authors>
+    <owners>Ash Beeson</owners>
+    <licenseUrl>https://github.com/ashthos/Cake.KeePass</licenseUrl>
+    <projectUrl>https://github.com/ashthos/Cake.KeePass</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Wraps KeePass functionality into a CakeBuild addin.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Cake KeePass</tags>
+  </metadata>
+  <files>
+    <file src="src/Cake.KeePass/bin/Release/Cake.KeePass.dll" target="lib\net45\" />    
+    <file src="src/Cake.KeePass/bin/Release/KeePassLib.dll" target="lib\net45\" />  
+  </files>
+</package>

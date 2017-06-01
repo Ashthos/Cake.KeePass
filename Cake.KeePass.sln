@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.KeePass", "src\Cake.KeePass\Cake.KeePass.csproj", "{0F463BE9-18B3-40F8-B4A6-B737B833F43E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{C0F9C74C-99E9-437F-9015-ED7A4E90ED75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2DFBDE24-6443-4877-BECD-F4E4B4E684BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{15035323-CB96-4F94-81F9-470ABA3909E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cake.KeePass.Test.Integration", "test\integration\Cake.KeePass.Test.Integration\Cake.KeePass.Test.Integration.csproj", "{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F463BE9-18B3-40F8-B4A6-B737B833F43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F463BE9-18B3-40F8-B4A6-B737B833F43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F463BE9-18B3-40F8-B4A6-B737B833F43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F463BE9-18B3-40F8-B4A6-B737B833F43E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{15035323-CB96-4F94-81F9-470ABA3909E8} = {2DFBDE24-6443-4877-BECD-F4E4B4E684BC}
+		{4D0412ED-3C4D-4E2F-8DCA-9303D3D11FDF} = {15035323-CB96-4F94-81F9-470ABA3909E8}
+	EndGlobalSection
+EndGlobal
