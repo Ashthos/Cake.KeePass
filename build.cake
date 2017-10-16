@@ -5,10 +5,10 @@
 // ./Build.ps1 -Target "build"
 
 // For smoke test Task
-// #Addin "Cake.KeePass"
+#Addin "Cake.KeePass"
 
 // If testing a local dll, comment out the #Addin above and uncomment the line below.
-#r "src/Cake.KeePass/bin/Release/netstandard2.0/Cake.KeePass.dll"
+// #r "src/Cake.KeePass/bin/Release/netstandard2.0/Cake.KeePass.dll"
 
 #tool "nuget:?package=xunit.runner.console"
 
@@ -58,7 +58,16 @@
     .Does(() => {
 
         Information("Running KeePass integration tests");
-        XUnit2("./test/integration/**/bin/**/*.Test.Integration.dll");
+        var settings = new DotNetCoreTestSettings
+        {
+            Configuration = "Release"
+        };
+
+        var projectFiles = GetFiles("./test/integration/**/*.csproj");
+        foreach(var file in projectFiles)
+        {
+            DotNetCoreTest(file.FullPath, settings);
+        }
 
     }); 
 
